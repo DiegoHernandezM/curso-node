@@ -1,6 +1,7 @@
-# 02 Bases de Node.js
+# 02 Bases de Node
 
-´´´
-npm install
+
+Correr en Dev
+```
 npm run dev
-´´
+```
