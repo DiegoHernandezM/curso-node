@@ -1,0 +1,7 @@
+# Ignorar node_modules en TODOS los subproyectos
+node_modules/
+
+# Otros comunes
+dist/
+coverage/
+.env

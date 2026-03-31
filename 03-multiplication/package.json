@@ -1,0 +1,28 @@
+{
+  "name": "03-multiplication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "dev:nodemon": "nodemon -b 7",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/yargs": "^17.0.35",
+    "nodemon": "^3.1.14",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "fs": "^0.0.1-security",
+    "yargs": "^18.0.0"
+  }
+}
