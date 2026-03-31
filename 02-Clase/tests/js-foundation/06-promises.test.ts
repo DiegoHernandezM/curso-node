@@ -2,7 +2,7 @@ import { getPokemonById } from "../../src/js-foundation/06-promises";
 
 
 
-describe('js-foundation/06-promises.ts', () => {
+describe('js-foundation/06-promises.ts', () => { 
 
 
   test('getPokemonById should return a pokemon', async() => {
