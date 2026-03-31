@@ -5,6 +5,7 @@
 
 import type {Config} from 'jest';
 
+
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -13,10 +14,11 @@ const config: Config = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/72/g1bvqcl92z95vcsk9yq6fx2r0000gn/T/jest_dx",
+
+  // cacheDirectory: "/private/var/folders/t2/p7l_dbm17lbc_m203347fh300000gn/T/jest_dx",
 
   // Automatically clear mock calls, instances, contexts and results before every test
-  // clearMocks: false,
+  clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
@@ -84,9 +86,7 @@ const config: Config = {
   //   "cjs",
   //   "jsx",
   //   "ts",
-  //   "tsx",
-  //   "json",
-  //   "node"
+
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module

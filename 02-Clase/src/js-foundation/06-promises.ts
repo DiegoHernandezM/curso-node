@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { httpClientPlugin as http } from '../plugins/http-client.plugin';
 // const { http } = require('../plugins');
 
@@ -13,6 +14,14 @@ export const getPokemonById = async( id: string|number ):Promise<string> => {
   }
   
   
+=======
+const { http } = require('../plugins');
+
+export const getPokemonById = async( id: string|number ):Promise<string> => {
+  const url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
+
+  const pokemon = await http.get( url );
+>>>>>>> ef102d61333903922f9c72ae22cf36bbcebbb9f6
 
   // const resp = await fetch( url );
   // const pokemon = await resp.json();
@@ -20,6 +29,10 @@ export const getPokemonById = async( id: string|number ):Promise<string> => {
 
   // throw new Error('Pokemon no existe');
   
+<<<<<<< HEAD
+=======
+  return pokemon.name;
+>>>>>>> ef102d61333903922f9c72ae22cf36bbcebbb9f6
   
   // return fetch( url )
   //   .then( ( resp ) => resp.json())

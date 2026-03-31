@@ -1,6 +1,9 @@
 {
+<<<<<<< HEAD
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts","**/*.test.ts"],
+=======
+>>>>>>> ef102d61333903922f9c72ae22cf36bbcebbb9f6
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 

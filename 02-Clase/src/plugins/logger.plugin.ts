@@ -3,7 +3,11 @@ import winston, { format } from 'winston';
 const { combine, timestamp, json } = format;
 
 
+<<<<<<< HEAD
 export const logger = winston.createLogger({
+=======
+const logger = winston.createLogger({
+>>>>>>> ef102d61333903922f9c72ae22cf36bbcebbb9f6
   level: 'info',
   format: combine(
     timestamp(),
