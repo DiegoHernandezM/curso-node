@@ -1,0 +1,4 @@
+{"level":"low","message":"Service: https://www.google.com working","createdAt":"2026-04-04T19:51:15.334Z"}
+{"level":"low","message":"Service: https://www.google.com working","createdAt":"2026-04-04T19:51:20.183Z"}
+{"level":"low","message":"Service: https://www.google.com working","createdAt":"2026-04-04T19:51:25.164Z"}
+{"level":"high","message":"TypeError: fetch failed","createdAt":"2026-04-04T19:52:10.055Z"}
