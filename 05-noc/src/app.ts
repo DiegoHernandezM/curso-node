@@ -7,6 +7,6 @@ import { envs } from './config/plugins/envs.plugin';
 })();
 
 function main() {
-  //Server.start();
-  console.log('process.env', envs.PORT);
+  Server.start();
+  //console.log('process.env', envs.PORT, envs.MAILER_EMAIL, envs.MAILER_PASSWORD, envs.MAILER_SECRET_KEY);
 }
