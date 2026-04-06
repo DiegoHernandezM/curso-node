@@ -4,9 +4,13 @@ import { CronService } from './cron/cron-service';
 import { LogImpRepository } from '../infrastructure/repositories/log.imp-repository';
 import { EmailService } from './email/email.servie';
 import { SendEmailLogs } from '../domain/use-cases/email/send-email-logs';
+import { MongoLogDatasource } from '../infrastructure/datasources/mongo-log-datasource';
+import { PostgresLogDatasource } from '../infrastructure/datasources/postgres-log.datasource';
 
 const logRepository = new LogImpRepository(
-  new FileSystemDatasource(),
+  //new FileSystemDatasource(),
+  //new MongoLogDatasource(),
+  new PostgresLogDatasource(),
 );
 const emailService = new EmailService();
 export class Server {
@@ -14,16 +18,17 @@ export class Server {
   static start() {
     console.log('Server is running');
 
-    new SendEmailLogs(
-      emailService,
-      logRepository,
-    ).execute(['tsu.diego.hdezm@gmail.com']);
-    //emailService.sendEmailWithFileSystemLogs(['tsu.diego.hdezm@gmail.com']);
+    // Manda correo | Logs de servidor
+    //new SendEmailLogs(
+      //emailService,
+      //logRepository,
+    //).execute(['tsu.diego.hdezm@gmail.com']);
+   
     
     CronService.createJob(
       '*/5 * * * * *',
       () => {
-        const url = 'https://www.google.com';
+        const url = 'https://www.goodsadsagle.com';
         new CheckService(
           logRepository,
           () => {
@@ -33,7 +38,6 @@ export class Server {
             console.log(error);
           },
         ).execute(url);
-        //new CheckService().execute('http://localhost:3000');
       }
     );
 

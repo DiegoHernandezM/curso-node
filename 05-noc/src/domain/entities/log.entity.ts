@@ -1,8 +1,8 @@
 
 export enum LogSeverityLevel {
-    Low = 'low',
-    Medium = 'medium',
-    High = 'high',
+    Low = 'LOW',
+    Medium = 'MEDIUM',
+    High = 'HIGH',
 }
 
 export interface LogEntityOptions {
@@ -27,6 +27,7 @@ export class LogEntity {
     }
 
     static fromJson(json: string): LogEntity {
+        json = (json === '') ? '{}' : json;
         const  {level, message, createdAt, origin} = JSON.parse(json) as LogEntityOptions;
         const log = new LogEntity({
             level: level,
@@ -35,5 +36,16 @@ export class LogEntity {
             origin: 'log.entity.ts',
         });
         return log;
+    }
+
+    static fromObject(object: {[key:string]:any}) :LogEntity {
+        const {level, message, createdAt, origin} = object as LogEntityOptions;
+        if(!message) throw new Error('Message is required');
+        return new LogEntity({
+            level: level,
+            message: message,
+            createdAt: createdAt,
+            origin: origin,
+        });
     }
 }
