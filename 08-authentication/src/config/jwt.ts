@@ -14,7 +14,12 @@ export class JwtAdapter {
     })
   }
 
-  static verifyToken(token: string): any {
-    return jwt.verify(token, '123456');
+  static verifyToken(token: string): Promise<any> {
+    return new Promise((resolve) => {
+      jwt.verify(token, envs.JWT_SEED, (err, decoded) => {
+        if (err) return resolve(null);
+        resolve(decoded as string);
+      });
+    })
   }
 }
