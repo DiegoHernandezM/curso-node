@@ -4,3 +4,5 @@ export * from './entities/user.entity';
 export * from './dtos/category/register-category.dto';
 export * from './entities/category.entity';
 export * from './dtos/shared/pagination.dto';
+export * from './dtos/product/register-product.dto';
+export * from './entities/product.entity';
