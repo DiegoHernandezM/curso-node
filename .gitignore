@@ -5,6 +5,5 @@ node_modules/
 dist/
 coverage/
 .env
-mongo/
 postgres/
 keys/
